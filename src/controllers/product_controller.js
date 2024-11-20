@@ -32,9 +32,9 @@ async function get_products(req, res) {
   }
 }
 
-function get_product(req, res) {
+async function get_product(req, res) {
   try {
-    const response = productService.getProduct(req.params.id);
+    const response = await productService.getProduct(req.params.id);
     res.status(StatusCodes.OK).json({
       success: true,
       error: {},

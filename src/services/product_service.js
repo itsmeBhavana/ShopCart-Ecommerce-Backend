@@ -20,8 +20,9 @@ class ProductService {
     return response.data;
   }
 
-  getProduct(id) {
-    return products.filter((product) => product.id == id);
+  async getProduct(id) {
+    const response = await this.repository.getProduct(id);
+    return response.data;
   }
 }
 
