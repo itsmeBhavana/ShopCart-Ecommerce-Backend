@@ -1,9 +1,9 @@
 const express = require("express");
 const { PORT } = require("./config/serverConfig");
-const pingRoutes = require("./routes/pingRoutes");
+const apiRouter = require("./routes/apiRouter");
 
 const app = express();
-app.use("/api/v1/ping", pingRoutes);
+app.use("/api", apiRouter);
 
 app.listen(PORT, () => {
   console.log(`Server is running on the port ${PORT}...`);

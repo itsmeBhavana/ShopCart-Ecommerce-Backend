@@ -1,5 +1,9 @@
 function pingController(req, res) {
-  return res.json({ message: "Ok" });
+  return res.json({ message: "Pinging V1" });
 }
 
-module.exports = { pingController };
+function pingControllerV2(req, res) {
+  return res.json({ message: "Pinging V2 controller" });
+}
+
+module.exports = { pingController, pingControllerV2 };
