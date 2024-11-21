@@ -17,12 +17,12 @@ class ProductService {
 
   async getProducts() {
     const response = await this.repository.getProducts();
-    return response.data;
+    return response;
   }
 
   async getProduct(id) {
     const response = await this.repository.getProduct(id);
-    return response.data;
+    return response;
   }
 }
 
