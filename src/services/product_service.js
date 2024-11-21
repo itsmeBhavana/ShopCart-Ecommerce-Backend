@@ -24,6 +24,11 @@ class ProductService {
     const response = await this.repository.getProduct(id);
     return response;
   }
+
+  async createProduct(product) {
+    const response = await this.repository.createProduct(product);
+    return response;
+  }
 }
 
 module.exports = ProductService;

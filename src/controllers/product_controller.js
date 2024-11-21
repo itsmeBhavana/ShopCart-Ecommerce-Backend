@@ -4,9 +4,9 @@ const FakeStoreRepository = require("../repositories/fake_store_repository");
 
 const productService = new ProductService(new FakeStoreRepository());
 
-function create_product(req, res) {
+async function create_product(req, res) {
   try {
-    const response = productService.createProduct(req.body);
+    const response = await productService.createProduct(req.body);
     return res.status(StatusCodes.CREATED).json({
       success: true,
       error: {},

@@ -20,6 +20,18 @@ class FakeStoreRepository {
       console.log(err);
     }
   }
+
+  async createProduct(product) {
+    try {
+      const response = await axios.post(
+        "https://fakestoreapi.com/products/",
+        product
+      );
+      return response.data;
+    } catch (err) {
+      console.log(err);
+    }
+  }
 }
 
 module.exports = FakeStoreRepository;
